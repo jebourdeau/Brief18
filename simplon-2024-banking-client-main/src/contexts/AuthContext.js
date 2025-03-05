@@ -9,17 +9,19 @@ export const AuthProvider = ({ children }) => {
   const login = async (username, password) => {
     try {
       const data = await loginService.login(username, password);
+      localStorage.setItem('auth', JSON.stringify(data));
       setAuth(data);
       return data;
     } catch (error) {
       console.error('Login failed:', error);
-      throw error;
+      return false;
     }
   };
 
   const register = async (username, password) => {
     try {
       const data = await loginService.register(username, password);
+      localStorage.setItem('auth', JSON.stringify(data));
       setAuth(data);
       return true;
     } catch (error) {

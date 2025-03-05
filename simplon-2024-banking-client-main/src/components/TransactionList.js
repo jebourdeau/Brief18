@@ -4,10 +4,12 @@ import { getTransactions, createTransaction } from '../services/transactionServi
 import { getCategories } from '../services/categoryService';
 import { getPaymentMethods } from '../services/paymentMethodService';
 import Modal from './Modal';
+import { useNavigate } from 'react-router-dom';
 
 export default function TransactionList() {
   const { auth } = useAuth();
   const [transactions, setTransactions] = useState([]);
+  const navigate =  useNavigate();
   const [categories, setCategories] = useState([]);
   const [paymentMethods, setPaymentMethods] = useState([]);
   const [showNewForm, setShowNewForm] = useState(false);
@@ -30,9 +32,13 @@ export default function TransactionList() {
         setTransactions(transactionsData);
         setCategories(categoriesData);
         setPaymentMethods(paymentMethodsData);
+        if(paymentMethodsData.length === 0){
+      navigate('/payment-methods');
+    }
       });
     }
-  }, [auth]);
+  }, [auth, navigate]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,7 +82,11 @@ export default function TransactionList() {
   return (
     <div className="transaction-list">
       <h2>Transactions</h2>
-      <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
+      <button
+        className="fab-button"
+        onClick={() => setShowNewForm(true)}
+        disabled={paymentMethods.length === 0}
+        >+</button>
       
       {Object.entries(groupedTransactions).map(([date, transactions]) => (
         <div key={date} className="date-group">

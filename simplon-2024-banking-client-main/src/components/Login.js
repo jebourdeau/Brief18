@@ -19,7 +19,7 @@ export default function Login() {
     const success = isLogin 
       ? await login(username, password)
       : await register(username, password);
-    
+      
     if (!success) {
       setError(isLogin ? 'Login failed' : 'Registration failed');
     }
