@@ -13,8 +13,15 @@ pour la vidéo 5 : probleme de mise en page, creer une modale pour rester connec
 
 ## Point de réussite
 
-ajout d'une checkbox pour sauvegarder la connexion;
+pour la vidéo 1 modification du authContext avec un "return false"
+pour la vidéo 2 : je n'ai rien vue d'anormal
+pour la vidéo 3 : ajout de média query, gestion d'une redirection vers le systeme de payement, s'il n'y en a pas d'enregistrer.
+pour la vidéo 4 : mise en place de la gestion de la taille de l'écran,
+pour la vidéo 5 : mise en place de la gestion du localStorage pour sauvegarder les données de l'utilisateur.
+
 modification des couleurs afin de rendre l'application plus lisible;
+
+
 Ajout de la CI ligthhouse;
 message d'alerte lors de la connexion;
 pour la cohérence dans les hooks pas trop de problème par contre la quantité de code à corriger est importante, résultat je ne pense pas arriver à tout corriger.

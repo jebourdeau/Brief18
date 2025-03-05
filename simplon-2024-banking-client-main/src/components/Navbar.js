@@ -11,14 +11,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="nav-brand">Finance Tracker</div>
+    <>
+    <h2 className="nav-brand">Finance Tracker</h2>
+      <nav className="navbar">
       <div className="nav-links">
-        <Link to="/" className={isActive('/')}>Transactions</Link>
-        <Link to="/categories" className={isActive('/categories')}>Categories</Link>
-        <Link to="/payment-methods" className={isActive('/payment-methods')}>Payment Methods</Link>
+        <Link to="/" className={isActive('/')} title='transactions'>Transactions</Link>
+        <Link to="/categories" className={isActive('/categories')} title='catégories'>Categories</Link>
+        <Link to="/payment-methods" className={isActive('/payment-methods')} title='mode de payement'>Payment Methods</Link>
       </div>
-      <div onClick={logout}>Logout</div>
+      <button onClick={logout} title='déconnexion'>Logout</button>
     </nav>
+  </>
   );
 }

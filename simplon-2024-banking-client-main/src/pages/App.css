@@ -37,12 +37,16 @@
   max-width: 150px;
   margin: 0 auto;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .login-container form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .login-container input {
@@ -139,7 +143,7 @@
 }
 
 .nav-links a.active {
-  color: #032b5f;
+  color: #035f22;
   background-color: rgba(26, 115, 232, 0.12);
 }
 
@@ -156,8 +160,9 @@
 }
 
 .navbar button:hover {
-  background-color: #e8eaed;
-  color: #07326b;
+  background-color: #f10505;
+  color: #07116b;
+  font-weight: bold;
 }
 
 /* Transaction list styles */
@@ -252,9 +257,6 @@ textarea {
 
 /* FAB button */
 .fab-button {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -263,14 +265,14 @@ textarea {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .fab-button:hover {
-  background-color: #033366;
+  background-color: #660334;
 }
 
 /* Category and Payment Method list styles */
