@@ -59,13 +59,20 @@
   padding: 10px;
   background: #012a55;
   color: white;
-  border: none;
+  border: #dd0672 solid 1px;
+  margin : 10px;
   border-radius: 4px;
   cursor: pointer;
 }
+.login-container button:hover {
+        color: #050001;
+        background-color: rgba(26, 115, 232, 0.08);
+        
+}
 
 .login-container .error {
-  color: red;
+  color: rgb(206, 7, 7);
+  font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -105,20 +112,25 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(36, 36, 35, 0.8);
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   margin-bottom: 2rem;
   position: sticky;
+  border-radius: 30px;
   top: 0;
   z-index: 100;
 }
 
 .nav-brand {
   font-size: 1.25rem;
-  font-weight: 500;
-  color: #700202;
+  font-weight: 500 bold;
+  text-decoration: underline;
+  color: #e20606;
   letter-spacing: 0.25px;
+  justify-content: center;
+  text-align: center;
+
 }
 
 .nav-links {
@@ -129,7 +141,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #5f6368;
+  color: #0b3c77;
   padding: 0.75rem 1rem;
   border-radius: 1rem;
   transition: all 0.2s ease;
@@ -138,12 +150,13 @@
 }
 
 .nav-links a:hover {
-  color: #85050c;
+  color: #d30913;
   background-color: rgba(26, 115, 232, 0.08);
 }
 
 .nav-links a.active {
-  color: #035f22;
+  font-weight: bold ;
+  color: #f3f0f0;
   background-color: rgba(26, 115, 232, 0.12);
 }
 
